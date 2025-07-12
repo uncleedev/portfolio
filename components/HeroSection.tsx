@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { Button } from './ui/button'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail, Youtube } from 'lucide-react'
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -11,7 +11,8 @@ export default function HeroSection() {
     const socialLinks = [
         { href: 'https://github.com/uncleedev', icon: <Github className="w-6 h-6" /> },
         { href: 'https://www.linkedin.com/in/uncledev/', icon: <Linkedin className="w-6 h-6" /> },
-        { href: '#', icon: <Mail className="w-6 h-6" /> },
+        {href: "https://www.facebook.com/uncledev/", icon: <Facebook className="w-6 h-6" /> },
+        {href: "https://www.youtube.com/@uncleedev", icon: <Youtube className="w-6 h-6" /> },
     ];
 
   return (
