@@ -10,12 +10,12 @@ export default function AboutSection() {
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">About Me</h2>
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  I'm a passionate Systems Engineer with over 8 years of experience in designing and implementing
-                  scalable cloud solutions. My expertise spans across full-stack development, DevOps practices, and
+                  I'm a passionate Software Engineer with over 3 years of experience in designing and implementing
+                  scalable cloud solutions. My expertise spans across full-stack development, and
                   system architecture.I'm a graduating student from Colegio de Montalban, pursuing a Bachelor of Science in Information Technology. I’m passionate about web development and design, with a strong interest in building new things and exploring emerging technologies.
                 </p>
                 <p>
-                  Over the past four years, I’ve taken the initiative to deepen my understanding of technology through self-study and hands-on projects. I focus on writing clean, maintainable code and continuously strive to improve my skills. For me, learning never stops—especially in a field that evolves as fast as tech.
+                  Over the past three years, I’ve taken the initiative to deepen my understanding of technology through self-study and hands-on projects. I focus on writing clean, maintainable code and continuously strive to improve my skills. For me, learning never stops—especially in a field that evolves as fast as tech.
                 </p>
                 <p>
                   When I'm not coding, you’ll often find me at the gym, building strength and discipline. I also enjoy exploring new experiences—both in technology and in life.
@@ -25,7 +25,7 @@ export default function AboutSection() {
               <div className="mt-8 grid grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-[#B8860B] font-semibold mb-2">Experience</h4>
-                  <p className="text-white text-2xl font-bold">4+ years</p>
+                  <p className="text-white text-2xl font-bold">3+ years</p>
                 </div>
                 <div>
                   <h4 className="text-[#B8860B] font-semibold mb-2">Projects</h4>
@@ -39,7 +39,7 @@ export default function AboutSection() {
                 <div className="w-80 h-96 sm:w-96 sm:h-[28rem] rounded-2xl overflow-hidden border-4 border-[#B8860B]/30 shadow-2xl">
                   <Image
                     src="/about.jpg"
-                    alt="John Doe working"
+                    alt="uncle working"
                     width={400}
                     height={450}
                     className="w-full h-full object-cover"
