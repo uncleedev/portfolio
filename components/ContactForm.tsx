@@ -78,7 +78,7 @@ export default function ContactForm() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="John"
+                placeholder="First Name"
                 required
                 disabled={isLoading}
                 className="bg-[#053133]/80 border-[#4A7C7A]/30 text-white placeholder-gray-400 focus:border-[#B8860B]"
@@ -90,7 +90,7 @@ export default function ContactForm() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="Doe"
+                placeholder="Last Name"
                 required
                 disabled={isLoading}
                 className="bg-[#053133]/80 border-[#4A7C7A]/30 text-white placeholder-gray-400 focus:border-[#B8860B]"
@@ -105,7 +105,7 @@ export default function ContactForm() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="john@example.com"
+              placeholder="email@example.com"
               required
               disabled={isLoading}
               className="bg-[#053133]/80 border-[#4A7C7A]/30 text-white placeholder-gray-400 focus:border-[#B8860B]"
