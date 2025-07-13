@@ -6,10 +6,11 @@ import Image from 'next/image'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { ExternalLink } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function ProjectSection() {
 
-    const projects = [
+  const projects = [
     {
       title: "ImApp",
       description: "Inventory management application for small businesses. This was my 2nd year project at CDM.",
@@ -35,20 +36,24 @@ export default function ProjectSection() {
 
   return (
     <section id="projects" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Featured Projects</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A showcase of my recent work and contributions to various projects
-            </p>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            A showcase of my recent work and contributions to various projects
+          </p>
+        </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="bg-[#053133]/50 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105 overflow-hidden p-0"
-              >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: false, amount: 0.5 }}
+            >
+              <Card className="bg-[#053133]/50 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105 overflow-hidden p-0">
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -57,11 +62,14 @@ export default function ProjectSection() {
                     height={300}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
                 </div>
+
                 <CardContent className="px-6 pb-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
@@ -85,9 +93,10 @@ export default function ProjectSection() {
                   </Button>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
+      </div>
     </section>
   )
 }

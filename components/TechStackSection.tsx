@@ -1,7 +1,10 @@
+"use client"
+
 import React from 'react'
 import { Card, CardContent } from './ui/card'
 import { SiElectron, SiFirebase, SiJavascript, SiMongodb, SiMysql, SiNextdotjs, SiPhp, SiReact, SiSupabase, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { FaNodeJs } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 export default function TechStackSection() {
 
@@ -32,15 +35,23 @@ export default function TechStackSection() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {techStack.map((tech, index) => (
-              <Card
+              <motion.div
                 key={index}
-                className="bg-[#053133]/70 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: false, amount: 0.5 }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="text-[#D4AF37] mb-3 flex justify-center">{tech.icon}</div>
-                  <h3 className="text-white font-semibold text-sm">{tech.name}</h3>
-                </CardContent>
-              </Card>
+                <Card
+                  className="bg-[#053133]/70 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105"
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="text-[#D4AF37] mb-3 flex justify-center">{tech.icon}</div>
+                    <h3 className="text-white font-semibold text-sm">{tech.name}</h3>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
             ))}
           </div>
         </div>

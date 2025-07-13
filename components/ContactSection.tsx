@@ -1,19 +1,35 @@
+'use client'
+
 import { Github, Linkedin, Mail } from "lucide-react"
 import ContactForm from "./ContactForm"
+import { motion } from "framer-motion"
 
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to start your next project? Let's discuss how we can work together
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
@@ -53,9 +69,16 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <ContactForm />
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <ContactForm />
+          </motion.div>
         </div>
       </div>
     </section>
