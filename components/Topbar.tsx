@@ -4,20 +4,13 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const navLinks = [
-	{ href: "#home", label: "Home" },
-	{ href: "#tech", label: "Tech Stack" },
-	{ href: "#projects", label: "Projects" },
-	{ href: "#about", label: "About" },
-	{ href: "#contact", label: "Contact" },
-];
+import { navLinks } from "@/constants/data";
 
 export default function Topbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
-		<nav className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm border-b border-[#4A7C7A]/20 z-50">
+		<nav className="fixed top-0 w-screen bg-primary/95 backdrop-blur-sm border-b border-[#4A7C7A]/20 z-50">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center h-16">
                     <Link
