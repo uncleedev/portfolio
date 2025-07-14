@@ -18,7 +18,7 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="pt-20 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="section-screen">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
 
           {/* Left Content */}

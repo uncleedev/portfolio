@@ -8,7 +8,7 @@ import Topbar from "@/components/Topbar";
 
 export default function Home() {
   return (
-    <div className="w-full h-full">
+    <>
       <Topbar />
       <HeroSection />
       <TechStackSection />
@@ -16,6 +16,6 @@ export default function Home() {
       <AboutSection />
       <ContactSection />
       <Footer />
-    </div>
+    </>
   );
 }
