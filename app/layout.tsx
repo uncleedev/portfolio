@@ -27,7 +27,7 @@ export default function RootLayout({
       <meta name="google-site-verification" content="dIR1o7kxZOClQRWIzwH4dN774AJJWQ8AB17iEsyVbV4" />
       <meta name="keywords" content="uncledev, Developer," />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen w-screen bg-gradient-to-br from-[#053133] via-[#4A7C7A] to-[#053133]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-[#053133] via-[#4A7C7A] to-[#053133]`}
       >
         {children}
       </body>
