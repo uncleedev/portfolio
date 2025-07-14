@@ -8,7 +8,7 @@ import Topbar from "@/components/Topbar";
 
 export default function Home() {
   return (
-    <div className="max-h-screen w-screen  bg-gradient-to-br from-[#053133] via-[#4A7C7A] to-[#053133]">
+    <div className="min-h-screen w-screen  bg-gradient-to-br from-[#053133] via-[#4A7C7A] to-[#053133]">
       <Topbar />
       <HeroSection />
       <TechStackSection />
