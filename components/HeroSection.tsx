@@ -21,7 +21,6 @@ export default function HeroSection() {
       <div className="section-screen">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
 
-          {/* Left Content */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -72,7 +71,6 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Image */}
           <motion.div
             className="flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
