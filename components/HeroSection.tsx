@@ -1,26 +1,37 @@
-"use client"
+"use client";
 
-import Image from 'next/image'
-import React from 'react'
-import { Button } from './ui/button'
-import { Facebook, Github, Linkedin, Mail, Youtube } from 'lucide-react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Image from "next/image";
+import React from "react";
+import { Button } from "./ui/button";
+import { Facebook, Github, Linkedin, Mail, Youtube } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import TextType from "./TextType";
 
 export default function HeroSection() {
-
   const socialLinks = [
-    { href: 'https://github.com/uncleedev', icon: <Github className="w-6 h-6" /> },
-    { href: 'https://www.linkedin.com/in/uncledev/', icon: <Linkedin className="w-6 h-6" /> },
-    { href: 'https://www.facebook.com/uncledev/', icon: <Facebook className="w-6 h-6" /> },
-    { href: 'https://www.youtube.com/@uncleedev', icon: <Youtube className="w-6 h-6" /> },
+    {
+      href: "https://github.com/uncleedev",
+      icon: <Github className="w-6 h-6" />,
+    },
+    {
+      href: "https://www.linkedin.com/in/uncledev/",
+      icon: <Linkedin className="w-6 h-6" />,
+    },
+    {
+      href: "https://www.facebook.com/uncledev/",
+      icon: <Facebook className="w-6 h-6" />,
+    },
+    {
+      href: "https://www.youtube.com/@uncleedev",
+      icon: <Youtube className="w-6 h-6" />,
+    },
   ];
 
   return (
     <section id="home" className="pt-20 pb-16">
       <div className="section-screen">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -30,13 +41,21 @@ export default function HeroSection() {
           >
             <div className="space-y-4">
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                Jhon Brian Arce
+                <TextType
+                  text={["Jhon Brian Arce", "Jhon Brian Arce"]}
+                  typingSpeed={200}
+                  pauseDuration={2500}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  loop
+                />
               </h2>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">
                 Aspiring Software Engineer
               </h3>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
-                I am a 4th year college student with a passion for development and a goal of becoming a successful Software Engineer.
+                I am a 4th year college student with a passion for development
+                and a goal of becoming a successful Software Engineer.
               </p>
             </div>
 
@@ -44,7 +63,7 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 className="bg-[#4A7C7A] hover:bg-[#4A7C7A]/80 text-white px-8 py-3 text-lg"
-                onClick={() => window.location.href = '#projects'}
+                onClick={() => (window.location.href = "#projects")}
               >
                 View My Work
               </Button>
@@ -52,7 +71,7 @@ export default function HeroSection() {
                 size="lg"
                 variant="outline"
                 className="border-[#B8860B] text-accent hover:bg-accent hover:text-[#053133] px-8 py-3 text-lg bg-transparent"
-                onClick={() => window.open('/resume.pdf', '_blank')}
+                onClick={() => window.open("/resume.pdf", "_blank")}
               >
                 Download CV
               </Button>
@@ -92,9 +111,8 @@ export default function HeroSection() {
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#4A7C7A]/20 rounded-full blur-xl"></div>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
