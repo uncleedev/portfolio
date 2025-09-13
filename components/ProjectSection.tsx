@@ -65,7 +65,7 @@ export default function ProjectSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: false, amount: 0.5 }}
             >
-              <Card className="bg-[#053133]/50 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105 overflow-hidden p-0">
+              <Card className="bg-[#053133]/50 border-[#4A7C7A]/30 hover:border-[#B8860B]/50 transition-all duration-300 hover:scale-105 overflow-hidden flex flex-col h-full">
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -77,13 +77,15 @@ export default function ProjectSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
                 </div>
 
-                <CardContent className="px-6 pb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
+                <CardContent className="px-6 pb-6 flex flex-col flex-1">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-5">
+                      {project.description}
+                    </p>
+                  </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, techIndex) => (
@@ -100,7 +102,7 @@ export default function ProjectSection() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="border-[#B8860B] text-[#B8860B] hover:bg-[#B8860B] hover:text-[#053133] bg-transparent"
+                    className="border-[#B8860B] text-[#B8860B] hover:bg-[#B8860B] hover:text-[#053133] bg-transparent mt-auto"
                     onClick={() => window.open(project.link, "_blank")}
                   >
                     View Project <ExternalLink className="w-4 h-4 ml-2" />
