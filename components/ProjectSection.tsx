@@ -1,44 +1,56 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { Card, CardContent } from './ui/card'
-import Image from 'next/image'
-import { Button } from './ui/button'
-import { Badge } from './ui/badge'
-import { ExternalLink } from 'lucide-react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { Card, CardContent } from "./ui/card";
+import Image from "next/image";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ProjectSection() {
-
   const projects = [
     {
       title: "ImApp",
-      description: "Inventory management application for small businesses. This was my 2nd year project at CDM.",
+      description:
+        "Inventory management application for small businesses. This was my 2nd year project at CDM.",
       image: "/imapp.jpg",
       tech: ["Php", "Mysql", "HTML", "CSS", "Javascript"],
       link: "https://github.com/verastigue18/imApp/tree/main/imApp",
     },
     {
       title: "SpaceSync",
-      description: "A Colegio De Montalban's Class Scheduling System. This was my 2nd year project at CDM.",
+      description:
+        "A Colegio De Montalban's Class Scheduling System. This was my 2nd year project at CDM.",
       image: "/spacesync.jpg",
       tech: ["Visual Basic", "mysql", "GunaUI", ".Net"],
       link: "https://github.com/uncleedev/spacesync",
     },
     {
       title: "ReGate",
-      description: "Enhancing Interaction and Educational Resources at Colegio de Montalban. This was my 3rd year project at CDM.",
+      description:
+        "Enhancing Interaction and Educational Resources at Colegio de Montalban. This was my 3rd year project at CDM.",
       image: "/regate.jpg",
       tech: ["Nextjs", "Tailwind", "MongoDB", "Javascript"],
       link: "https://github.com/uncleedev/ReGate",
-    }, 
-  ]
+    },
+    {
+      title: "Capstone Generator",
+      description:
+        "is a web app that helps students brainstorm and discover capstone project ideas based on their preferred industry, project type, and difficulty level. It provides tailored suggestions to inspire and guide users in selecting meaningful and achievable projects.",
+      image: "/capstone-generator.png",
+      tech: ["Nextjs", "Tailwind", "Postgres", "Typescript"],
+      link: "https://uncledev-capstone-generator.vercel.app/",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            Featured Projects
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A showcase of my recent work and contributions to various projects
           </p>
@@ -66,7 +78,9 @@ export default function ProjectSection() {
                 </div>
 
                 <CardContent className="px-6 pb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {project.description}
                   </p>
@@ -87,7 +101,7 @@ export default function ProjectSection() {
                     variant="outline"
                     size="sm"
                     className="border-[#B8860B] text-[#B8860B] hover:bg-[#B8860B] hover:text-[#053133] bg-transparent"
-                    onClick={() => window.open(project.link, '_blank')}
+                    onClick={() => window.open(project.link, "_blank")}
                   >
                     View Project <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
@@ -98,5 +112,5 @@ export default function ProjectSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
